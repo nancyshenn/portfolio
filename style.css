@@ -217,10 +217,44 @@ h2 {
   }
 }
 
-
 .color-scheme {
   position: absolute;
   top: 1rem;
   right: 5rem;
   font-size: 70%;
+}
+
+.profile-stats {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-stats h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-sized columns */
+  text-align: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-stats dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+  text-transform: uppercase;
+  grid-row: 1; /* Place dt elements in the first row */
+}
+
+.profile-stats dd {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  grid-row: 2; /* Place dd elements in the second row */
 }
