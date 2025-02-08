@@ -258,3 +258,117 @@ h2 {
   margin: 0;
   grid-row: 2; /* Place dd elements in the second row */
 }
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-year {
+  color: gray;
+  font-size: 0.9em;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin: 1em 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin: 0;
+  overflow: visible;
+  flex: 1 1 200px;
+}
+
+.legend {
+  list-style: none;
+  padding: 1em;
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 2 1 200px;
+  min-width: 15em;
+  box-sizing: border-box;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  min-width: fit-content;
+}
+
+.swatch {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 50%;
+  vertical-align: -0.2em;
+  margin-right: 0.5em;
+}
+
+.search-container {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.searchBar {
+  display: block;
+  width: 100%;
+  max-width: 700px; /* Increase the max-width */
+  margin: 0 auto;
+  padding: 1em; /* Increase the padding */
+  font-size: 1.2em; /* Increase the font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+  &:is(path) {
+    fill: var(--color);
+  }
+
+}
+
+.selected path {
+  fill: var(--color);
+}
+
+.selected li {
+  background-color: var(--color);
+}
