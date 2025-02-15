@@ -372,3 +372,16 @@ svg:has(path:hover) path:not(:hover) {
 .selected li {
   background-color: var(--color);
 }
+
+.meta h1 {
+  font-size: 400%;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.meta p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
