@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.csv-table th, .csv-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.csv-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.summary-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.summary-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 120px;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#chart {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gridlines line {
+    stroke: #ddd;
+    stroke-opacity: 0.7;
+  }
+  
+  .gridlines path {
+    display: none;
+  }
+  
+/* Tooltip Styling */
+.tooltip {
+    position: fixed;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: none; /* Hidden by default */
+    pointer-events: none; /* Prevents blocking cursor interactions */
+  }
+  
+  .info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+  }
+  
+  .info dt {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .info dd {
+    margin: 0;
+  }
+  
+  /* Hover Effect on Dots */
+  circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  
+  circle:hover {
+    transform: scale(1.5);
+  }
+
+  /* Selected Dots */
+  circle.selected {
+    fill: #ab90e9;
+  }
+
+/* Brush Selection */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #666;
+    margin: 1em 0;
+    font-size: 0.9em;
+}
+
+.language-breakdown {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 1em 20px;
+    display: flex;
+    gap: 0.5em 1em;
+}
+
+.language-breakdown dt {
+    font-weight: 600;
+    color: #333;
+}
+
+.language-breakdown dd {
+    margin: 0;
+    color: #666;
+}
+

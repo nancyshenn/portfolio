@@ -6,13 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../global.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Meta</title>
 </head>
 <body>
     <h1>Meta</h1>
     <p>This page includes stats about the code of this website.</p>
     
-    <h2>CSV Data</h2>
+    <!-- Summary Stats Section -->
+    <h2>Summary</h2>
     <div id="csv-output"></div>
+    <div id="stats"></div>
+
+    <!-- Scatterplot -->
+    <h2>Commits by time of day</h2>
+    <div id="chart"></div>
+    <p id="selection-count">No commits selected</p>
+
+    <!-- Language Breakdown -->
+    <dl id="language-breakdown" class="stats language-breakdown"></dl>
+
+    <!-- Tooltip for Commit Details -->
+    <dl id="commit-tooltip" class="info tooltip">
+        <dt>Commit</dt>
+        <dd>
+            <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+
+        <dt>Lines Edited</dt>
+        <dd id="commit-lines"></dd>
+    </dl>
 </body>
 </html>
